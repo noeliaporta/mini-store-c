@@ -40,3 +40,19 @@ nav a:hover {
   margin-top: 1rem;
   border: 1px solid #ddd;
 }
+
+/* GRID DE PRODUCTOS */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.producto h3 {
+  margin-bottom: 0.5rem;
+}
+
+.producto p {
+  margin-bottom: 0.25rem;
+}
