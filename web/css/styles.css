@@ -1,0 +1,42 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TIPOGRAFÍA BASE */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* ESTRUCTURA GENERAL */
+header, section, footer {
+  padding: 1.5rem;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* PRODUCTOS */
+.producto {
+  background-color: #fff;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+}
