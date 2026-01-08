@@ -305,22 +305,32 @@ h2 {
 }
 
 .servicio-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.servicio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .servicio-card img {
-  width: 50%;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
   border-radius: 10px;
-  object-fit: cover;
+  background-color: #f4f6f8;
+  padding: 6px;
 }
+
+
+.servicio-card img {
+  transition: transform 0.3s ease;
+}
+
+.servicio-card:hover img {
+  transform: scale(1.03);
+}
+
 
 .servicio-card h3 {
   font-size: 1.1rem;
