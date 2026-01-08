@@ -109,6 +109,7 @@ h2 {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: visible;
 }
 
 .producto:hover {
@@ -235,9 +236,10 @@ h2 {
 /* GALERÍA DE IMÁGENES */
 .galeria {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   overflow-x: auto;
   margin-bottom: 12px;
+  padding-bottom: 6px;
 }
 
 .galeria img {
@@ -246,6 +248,14 @@ h2 {
   border-radius: 8px;
   object-fit: cover;
   cursor: pointer;
+  transform-origin: center center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.8);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  z-index: 10;
 }
 
 /* MEJORA CARD */
