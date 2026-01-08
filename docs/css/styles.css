@@ -119,3 +119,180 @@ section h2 {
 .btn-whatsapp:hover {
   opacity: 0.9;
 }
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* TITULOS */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #1f3a4d;
+}
+
+/* CONTENEDOR */
+#jeans {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* CARD PRODUCTO */
+.producto {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* PRODUCTO DESTACADO */
+.producto.destacado {
+  border: 2px solid #1f3a4d;
+  background: linear-gradient(180deg, #ffffff, #eef3f6);
+}
+
+/* USADOS */
+.producto.usado {
+  opacity: 0.85;
+}
+
+/* TITULO PRODUCTO */
+.producto h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #1f3a4d;
+}
+
+/* PRECIO */
+.precio {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2e8b57;
+  margin-bottom: 10px;
+}
+
+/* LISTA */
+.producto ul {
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.producto li {
+  margin-bottom: 6px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+/* HEADER */
+.site-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.site-header h1 {
+  font-size: 2.4rem;
+  color: #1f3a4d;
+}
+
+.lema {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ETIQUETAS */
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tag.nuevo {
+  background-color: #2e8b57;
+  color: #fff;
+}
+
+.tag.casi-nuevo {
+  background-color: #1f3a4d;
+  color: #fff;
+}
+
+.tag.detalle {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+/* BOTÓN WHATSAPP */
+.btn-wsp {
+  display: block;
+  margin-top: 14px;
+  padding: 10px;
+  text-align: center;
+  background-color: #25d366;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-wsp:hover {
+  background-color: #1ebe5d;
+}
+/* GALERÍA DE IMÁGENES */
+.galeria {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+
+.galeria img {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* MEJORA CARD */
+.producto {
+  display: flex;
+  flex-direction: column;
+}
