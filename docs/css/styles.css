@@ -295,3 +295,39 @@ h2 {
 .site-header nav a:hover::after {
   width: 100%;
 }
+/* SERVICIOS */
+.servicios-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.servicio-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.servicio-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.servicio-card h3 {
+  font-size: 1.1rem;
+  color: #1f3a4d;
+}
+
+.servicio-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
