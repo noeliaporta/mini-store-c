@@ -317,7 +317,7 @@ h2 {
 }
 
 .servicio-card img {
-  width: 100%;
+  width: 50%;
   border-radius: 10px;
   object-fit: cover;
 }
