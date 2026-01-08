@@ -7,38 +7,16 @@
 
 /* TIPOGRAFÍA BASE */
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #222;
 }
+
 
 /* ESTRUCTURA GENERAL */
 header, section, footer {
   padding: 1.5rem;
-}
-
-header {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-nav a {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: #333;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* PRODUCTOS */
-.producto {
-  background-color: #fff;
-  padding: 1rem;
-  margin-top: 1rem;
-  border: 1px solid #ddd;
 }
 
 /* GRID DE PRODUCTOS */
@@ -49,18 +27,12 @@ nav a:hover {
   margin-top: 1.5rem;
 }
 
-.producto h3 {
-  margin-bottom: 0.5rem;
-}
-
 .producto p {
   margin-bottom: 0.25rem;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #f9f7f4;
-  color: #2b2b2b;
+.producto strong {
+  color: #8b5e3c;
 }
 
 /* HEADER */
@@ -91,16 +63,6 @@ nav a:hover {
   opacity: 0.8;
 }
 
-/* PRODUCTOS */
-.producto {
-  background-color: #ffffff;
-  border-radius: 6px;
-}
-
-.producto strong {
-  color: #8b5e3c;
-}
-
 /* SECCIONES */
 section h2 {
   margin-bottom: 1rem;
@@ -120,21 +82,6 @@ section h2 {
   opacity: 0.9;
 }
 
-/* RESET BÁSICO */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
 /* TITULOS */
 h2 {
   text-align: center;
@@ -150,6 +97,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+  padding: 40px 20px;
 }
 
 /* CARD PRODUCTO */
@@ -158,6 +106,8 @@ h2 {
   border-radius: 10px;
   padding: 18px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -212,20 +162,37 @@ h2 {
     font-size: 1.6rem;
   }
 }
+
+
 /* HEADER */
 .site-header {
+  min-height: 100vh;
+  background-image: url("../assets/portada/PORTADA-catalogo.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 40px;
+}
+
+.header-content {
+  position: relative;
+  max-width: 700px;
+  padding: 2rem;
+  color: #7a3b4a;
 }
 
 .site-header h1 {
-  font-size: 2.4rem;
-  color: #1f3a4d;
+  font-size: 3rem;
+  letter-spacing: 2px;
 }
 
 .lema {
-  font-size: 1rem;
-  color: #666;
+  font-style: italic;
+  margin: 0.5rem 0;
 }
 
 /* ETIQUETAS */
@@ -255,7 +222,6 @@ h2 {
 
 /* BOTÓN WHATSAPP */
 .btn-wsp {
-  display: block;
   margin-top: 14px;
   padding: 10px;
   text-align: center;
@@ -264,12 +230,8 @@ h2 {
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
-  transition: background-color 0.2s ease;
 }
 
-.btn-wsp:hover {
-  background-color: #1ebe5d;
-}
 /* GALERÍA DE IMÁGENES */
 .galeria {
   display: flex;
@@ -284,15 +246,42 @@ h2 {
   border-radius: 8px;
   object-fit: cover;
   cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
 }
 
 /* MEJORA CARD */
-.producto {
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 240, 245, 0.65);
+}
+
+.site-header nav {
+  margin-top: 1.5rem;
   display: flex;
-  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: #7a3b4a;
+  font-weight: 500;
+  position: relative;
+}
+
+.site-header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #d88c9a;
+  transition: width 0.3s ease;
+}
+
+.site-header nav a:hover::after {
+  width: 100%;
 }
