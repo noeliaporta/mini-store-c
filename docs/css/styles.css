@@ -249,7 +249,7 @@ h2 {
   object-fit: cover;
   cursor: pointer;
   transform-origin: center center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .galeria img:hover {
