@@ -167,7 +167,7 @@ h2 {
 /* HEADER */
 .site-header {
   min-height: 100vh;
-  background-image: url("../assets/portada/PORTADA-catalogo.jpg");
+  background-image: url("../assets/portada/PORTADA-catalogo.jpeg");
   background-size: cover;
   background-position: center;
   position: relative;
