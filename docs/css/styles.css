@@ -345,3 +345,18 @@ h2 {
     max-height: 480px;
   }
 }
+
+@media (max-width: 768px) {
+  .productos-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 12px;
+  }
+
+  .producto {
+    min-width: 260px;
+    flex-shrink: 0;
+  }
+}
+
